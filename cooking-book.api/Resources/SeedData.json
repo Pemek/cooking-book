@@ -1,0 +1,26 @@
+{
+    "Recipes": 
+    [
+        {
+            "Id": 1,
+            "Title": "Recipe 1",
+            "Description": "Description 1"
+        }
+    ],
+    "Ingredients": 
+    [
+        {
+            "Id": 1,
+            "Name": "Egg"
+        }
+    ],
+    "RecipeIngredients": 
+    [
+        {
+            "Id": 1,
+            "RecipeId": 1,
+            "IngredientId": 1,
+            "Amount": "3"
+        }
+    ]
+}
