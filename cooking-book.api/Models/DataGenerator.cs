@@ -4,6 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Linq;
+using cooking_book.api.Models.Entities;
 
 namespace cooking_book.api.Models
 {

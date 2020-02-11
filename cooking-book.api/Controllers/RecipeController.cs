@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using cooking_book.api.Models;
 using cooking_book.api.Models.DTO;
+using cooking_book.api.Models.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

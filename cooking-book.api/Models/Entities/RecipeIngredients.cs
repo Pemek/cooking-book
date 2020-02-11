@@ -1,4 +1,4 @@
-namespace cooking_book.api.Models
+namespace cooking_book.api.Models.Entities
 {
     public class RecipeIngredients
     {
