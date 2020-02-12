@@ -17,13 +17,8 @@ namespace cooking_book.api.Models
                 var seedDataFile = File.ReadAllText("Resources/SeedData.json");
                 var seedDataJson = JObject.Parse(seedDataFile);
 
-                var recipes = JsonConvert.DeserializeObject<List<Recipe>>(seedDataJson["Recipes"].ToString());
-                var ingredients = JsonConvert.DeserializeObject<List<Ingredient>>(seedDataJson["Ingredients"].ToString());
-                var recipeIngredients = JsonConvert.DeserializeObject<List<RecipeIngredients>>(seedDataJson["RecipeIngredients"].ToString());
-
+                var recipes = JsonConvert.DeserializeObject<List<Recipe>>(seedDataJson["recipes"].ToString());
                 context.Recipes.AddRange(recipes);
-                context.Ingredients.AddRange(ingredients);
-                context.RecipeIngredients.AddRange(recipeIngredients);
 
                 context.SaveChanges();
             }
