@@ -4,7 +4,8 @@
         {
             "Id": 1,
             "Title": "Recipe 1",
-            "Description": "Description 1"
+            "Description": "Description 1",
+            "ImageUrl": "images/pancakes.jpg"
         }
     ],
     "Ingredients": 

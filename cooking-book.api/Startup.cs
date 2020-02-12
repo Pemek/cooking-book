@@ -52,6 +52,8 @@ namespace CookingBook.API
             {
                 endpoints.MapControllers();
             });
+
+            app.UseStaticFiles();
         }
     }
 }

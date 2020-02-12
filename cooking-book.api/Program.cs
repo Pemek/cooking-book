@@ -20,7 +20,9 @@ namespace CookingBook.API
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                    .UseWebRoot("Resources")
+                    .UseStartup<Startup>();
                 });
     }
 }

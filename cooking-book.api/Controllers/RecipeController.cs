@@ -36,6 +36,7 @@ namespace cooking_book.api.Controllers
                     Id = r.Id,
                     Description = r.Description,
                     Title = r.Title,
+                    ImageUrl = r.ImageUrl,
                     Ingredients = r.RecipeIngredients.Select(ri => 
                         new IngredientDTO
                         {
