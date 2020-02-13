@@ -1,31 +1,34 @@
 import React from 'react'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 
 import RecipeThumb from '../../components/RecipeThumb/RecipeThumb';
 
-const recipeList = (props) => {
+const RecipeList = (props) => {
     return (
         <div>
             <Container fluid style={{display: 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}}>
                 <RecipeThumb
+                    id={1}
                     img="http://forkgasm.com/images/bread-pudding.png"
                     name="Cake"
                     description="Some long description here" />
                 <RecipeThumb
+                    id={1}
                     img="http://forkgasm.com/images/bread-pudding.png"
                     name="Cake"
                     description="Some long description here" />
                 <RecipeThumb
+                    id={1}
                     img="http://forkgasm.com/images/bread-pudding.png"
                     name="Cake"
                     description="Some long description here" />
                 <RecipeThumb
+                    id={1}
                     img="http://forkgasm.com/images/bread-pudding.png"
                     name="Cake"
                     description="Some long description here" />
                 <RecipeThumb
+                    id={1}
                     img="http://forkgasm.com/images/bread-pudding.png"
                     name="Cake"
                     description="Some long description here" />
@@ -34,4 +37,4 @@ const recipeList = (props) => {
     );
 };
 
-export default recipeList;
+export default RecipeList;
