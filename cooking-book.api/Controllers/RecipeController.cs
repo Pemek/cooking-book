@@ -43,7 +43,7 @@ namespace cooking_book.api.Controllers
                 .FirstOrDefaultAsync(x => x.Id == Id);
             if (recipe == null)
                 return NotFound();
-            var recipeDTO = new RecipeDTO(recipe);
+            var recipeDTO = new RecipeDetailsDTO(recipe);
             return Ok(recipeDTO);
         }
     }
