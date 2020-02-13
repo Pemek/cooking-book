@@ -8,16 +8,27 @@ import RecipeThumb from '../../components/RecipeThumb/RecipeThumb';
 const recipeList = (props) => {
     return (
         <div>
-            <Container fluid>
-                <RecipeThumb />
-                <RecipeThumb />
-                <RecipeThumb />
-                <RecipeThumb />
-                <RecipeThumb />
-                <RecipeThumb />
-                <RecipeThumb />
-                <RecipeThumb />
-                <RecipeThumb />
+            <Container fluid style={{display: 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}}>
+                <RecipeThumb
+                    img="http://forkgasm.com/images/bread-pudding.png"
+                    name="Cake"
+                    description="Some long description here" />
+                <RecipeThumb
+                    img="http://forkgasm.com/images/bread-pudding.png"
+                    name="Cake"
+                    description="Some long description here" />
+                <RecipeThumb
+                    img="http://forkgasm.com/images/bread-pudding.png"
+                    name="Cake"
+                    description="Some long description here" />
+                <RecipeThumb
+                    img="http://forkgasm.com/images/bread-pudding.png"
+                    name="Cake"
+                    description="Some long description here" />
+                <RecipeThumb
+                    img="http://forkgasm.com/images/bread-pudding.png"
+                    name="Cake"
+                    description="Some long description here" />
             </Container>
         </div>
     );

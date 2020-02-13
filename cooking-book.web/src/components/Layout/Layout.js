@@ -1,4 +1,6 @@
 import React from 'react'
+import logo from '../../logo.svg';
+
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
@@ -8,8 +10,18 @@ const layout = (props) => {
     return (
         <div>
             <header>
-                <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="#home">Cooking Book</Navbar.Brand>
+                <Navbar bg="light" expand="lg" style={{'min-height': '80px' }}>
+                    <Navbar.Brand href="#home">
+                        <img
+                            alt=""
+                            src={logo}
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                        />
+                        {' '}
+                        Cooking Book
+                    </Navbar.Brand>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-success">Search</Button>
