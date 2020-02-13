@@ -5,6 +5,9 @@ import Badge from 'react-bootstrap/Badge'
 import RecipeHeaderImage from '../../components/RecipeDetails/RecipeHeaderImage/RecipeHeaderImage';
 import Ingredients from '../../components/RecipeDetails/Ingredients/Ingredients';
 import Steps from '../../components/RecipeDetails/Steps/Steps';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const RecipeDetails = () => {
     const { id } = useParams();
@@ -16,8 +19,14 @@ const RecipeDetails = () => {
                 <h1>{recipeJson.name}</h1>
                 <h3>{recipeJson.tagArr.map(t => <Badge variant="info">{t}</Badge>)}</h3>
             </div>
-            <Ingredients ingredients={recipeJson.ingredients} />
-            <Steps steps={recipeJson.steps} />
+            <Container>
+                <Row>
+                    <Col xs="12" sm="12" md="6"><Ingredients ingredients={recipeJson.ingredients} /></Col>
+                    <Col xs="12" sm="12" md="6"><Steps steps={recipeJson.steps} /></Col>
+                </Row>
+            </Container>
+            
+            
         </div>
     );
 };
