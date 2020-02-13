@@ -12,7 +12,7 @@ const Layout = (props) => {
     return (
         <div>
             <header>
-                <Navbar bg="light" expand="lg" style={{'min-height': '80px' }}>
+                <Navbar bg="light" expand="lg" style={{minHeight: '80px' }}>
                     <Link to="/">
                         <Navbar.Brand>
                             <img

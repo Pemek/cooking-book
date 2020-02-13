@@ -9,7 +9,7 @@ const RecipeThumb = (props) => {
                 <Card style={{ width: '24rem', border: 'none'}}>
                     <Card.Img variant="top" src={props.img} 
                         style={{ width: '90%', height: '90%', margin: 'auto' }} />
-                    <Card.Body style={{'text-align': 'center'}}>
+                    <Card.Body style={{textAlign: 'center'}}>
                         <Card.Title>{props.name}</Card.Title>
                         <Card.Text>{props.description}</Card.Text>
                     </Card.Body>
