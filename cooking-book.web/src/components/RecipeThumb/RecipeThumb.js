@@ -8,7 +8,7 @@ const RecipeThumb = (props) => {
             <div style={{ display: 'inline-block', margin: '10px' }}>
                 <Card style={{ width: '24rem', border: 'none'}}>
                     <Card.Img variant="top" src={props.img} 
-                        style={{ width: '90%', height: '90%', margin: 'auto' }} />
+                        style={{ borderRadius: '50%' }} />
                     <Card.Body style={{textAlign: 'center'}}>
                         <Card.Title>{props.name}</Card.Title>
                         <Card.Text>{props.description}</Card.Text>

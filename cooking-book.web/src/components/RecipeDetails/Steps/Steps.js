@@ -1,8 +1,9 @@
 import React from 'react'
+import Alert from 'react-bootstrap/Alert'
 
 const Steps = (props) => {
     return (
-        <div>
+        <Alert variant="warning">
             <h2>Steps</h2>
                 <ul>
                     {props.steps.map(s => {
@@ -11,7 +12,7 @@ const Steps = (props) => {
                         );
                     })}
                 </ul>
-        </div>
+        </Alert>
     );
 }
 

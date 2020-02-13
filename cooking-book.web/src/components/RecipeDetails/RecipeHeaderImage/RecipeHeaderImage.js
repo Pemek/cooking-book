@@ -19,9 +19,8 @@ const RecipeHeaderImage = (props) => {
                     left: '50%',
                     height: '300px',
                     transform: 'translateX(-50%) translateY(-50px)',
-                    borderLeft: '10px solid white',
-                    borderRight: '10px solid white',
-                    borderRadius: '50%'
+                    borderRadius: '50%',
+                    boxShadow: '0px 0px 20px 15px rgba(255, 255, 255, 1)'
                 }} />
         </div>
     );

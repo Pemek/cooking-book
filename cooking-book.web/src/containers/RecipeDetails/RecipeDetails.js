@@ -1,5 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import Badge from 'react-bootstrap/Badge'
+
 import RecipeHeaderImage from '../../components/RecipeDetails/RecipeHeaderImage/RecipeHeaderImage';
 import Ingredients from '../../components/RecipeDetails/Ingredients/Ingredients';
 import Steps from '../../components/RecipeDetails/Steps/Steps';
@@ -10,7 +12,10 @@ const RecipeDetails = () => {
     return (
         <div>
             <RecipeHeaderImage image={recipeJson.image} />
-            <h1 style={{textAlign: 'center'}}>{recipeJson.name}</h1>
+            <div style={{textAlign: 'center'}}>
+                <h1>{recipeJson.name}</h1>
+                <h3>{recipeJson.tagArr.map(t => <Badge variant="info">{t}</Badge>)}</h3>
+            </div>
             <Ingredients ingredients={recipeJson.ingredients} />
             <Steps steps={recipeJson.steps} />
         </div>
