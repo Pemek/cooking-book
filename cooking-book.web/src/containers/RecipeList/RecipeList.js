@@ -6,7 +6,7 @@ import RecipeThumb from '../../components/RecipeThumb/RecipeThumb';
 const RecipeList = (props) => {
     return (
         <div>
-            <Container fluid style={{display: 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'}}>
+            <Container fluid style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                 <RecipeThumb
                     id={1}
                     img="http://forkgasm.com/images/bread-pudding.png"
