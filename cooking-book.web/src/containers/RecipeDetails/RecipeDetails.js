@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Badge from 'react-bootstrap/Badge'
 
@@ -11,22 +11,39 @@ import Col from 'react-bootstrap/Col';
 
 const RecipeDetails = () => {
     const { id } = useParams();
+    let recipeDetails = null;
+    const [recipeJson, setRecipeJson] = useState(null);
 
+    const fetchRecipe = async () => {
+        const url = `https://localhost:5001/recipe/${id}`;
+        const response = await fetch(url);
+        const json = await response.json();
+        setRecipeJson(json);
+    };
+    useEffect(() => {
+        fetchRecipe();
+    }, [])
+
+    recipeDetails = (<div>Loading..</div>);
+    if (recipeJson !== null)
+        recipeDetails = (
+            <div>
+                <RecipeHeaderImage image={recipeJson.image} />
+                <div style={{textAlign: 'center'}}>
+                    <h1>{recipeJson.name}</h1>
+                    <h5>{recipeJson.tag.map(t => <Badge style={{margin: '5px'}} variant="info">{t}</Badge>)}</h5>
+                </div>
+                <Container>
+                    <Row>
+                        <Col xs="12" sm="12" md="6"><Ingredients ingredients={recipeJson.ingredients} /></Col>
+                        <Col xs="12" sm="12" md="6"><Steps steps={recipeJson.steps} /></Col>
+                    </Row>
+                </Container>
+            </div>
+        );
     return (
         <div>
-            <RecipeHeaderImage image={recipeJson.image} />
-            <div style={{textAlign: 'center'}}>
-                <h1>{recipeJson.name}</h1>
-                <h3>{recipeJson.tagArr.map(t => <Badge variant="info">{t}</Badge>)}</h3>
-            </div>
-            <Container>
-                <Row>
-                    <Col xs="12" sm="12" md="6"><Ingredients ingredients={recipeJson.ingredients} /></Col>
-                    <Col xs="12" sm="12" md="6"><Steps steps={recipeJson.steps} /></Col>
-                </Row>
-            </Container>
-            
-            
+            {recipeDetails}
         </div>
     );
 };

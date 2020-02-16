@@ -8,7 +8,7 @@ const Steps = (props) => {
                 <ul>
                     {props.steps.map(s => {
                         return (
-                            <li>{s.description}</li>
+                            <li key={s.id}>{s.description}</li>
                         );
                     })}
                 </ul>
