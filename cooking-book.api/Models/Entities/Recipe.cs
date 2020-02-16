@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace cooking_book.api.Models.Entities
 {
@@ -10,9 +11,17 @@ namespace cooking_book.api.Models.Entities
         public string Description { get; set; }
         [NotMapped]
         public string[] TagArr 
-        { 
+        {
+            get 
+            {
+                if(string.IsNullOrWhiteSpace(Tag))
+                    return new string[] {};
+                return Tag.Split(", ");
+            } 
             set 
             {
+                if (value == null)
+                    Tag = "";
                 Tag = string.Join(", ", value);
             } 
         }

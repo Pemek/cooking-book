@@ -7,7 +7,7 @@
 			"tagArr": [
 				"Dessert"
 			],
-			"image": "http://forkgasm.com/images/bread-pudding.png",
+			"image": "images/bread-pudding.png",
 			"ingredients": [
 				{
 					"amount": "0.5",
@@ -61,8 +61,7 @@
 					"description": "Done, enjoy! We actually eat it with a spoon straight from the cake tray!"
 				}
 			],
-			"notes": "- If you are not avoiding carbs, you can substitute the maple extract with maple syrup.\n- Add two bananas and a good handful of walnuts to the mix and you have banana walnut bread!\n- Other ingredientss we've tried (not all at once!): cardamom, Grand Marnier, vanilla extract. Feel free to experiment!",
-			"forked": "My friend Tal's \"tahini bread\" recipe."
+			"notes": "- If you are not avoiding carbs, you can substitute the maple extract with maple syrup.\n- Add two bananas and a good handful of walnuts to the mix and you have banana walnut bread!\n- Other ingredientss we've tried (not all at once!): cardamom, Grand Marnier, vanilla extract. Feel free to experiment!"
 		},
 		{
 			"name": "Grand Marnier & Coffee Ice Cream",
@@ -125,11 +124,10 @@
 				}
 			],
 			"notes": "- We use (and love) [Sukrin Icing/Melis](https://www.amazon.com/Sukrin-Icing-Melis-Powdered-Substitute/dp/B00U7FCNG2/?tag=leaverou-20) for a healthy icing sugar substitute, it tastes exactly like the real thing and doesn't contain any artificial sweeteners, so it's keto-friendly (it's stevia & erythritol).\n- You can use 2 tbsp instant coffee if you don't have espresso, which is what the original recipe this one is forked from uses!\n- This will produce a delicate Grand Marnier flavor and the coffee will be fairly prominent. Adjust quantities accordingly if you want a stronger Grand Marnier flavor or less of a coffee flavor\n- If you're uncomfortable with raw eggs, you can buy pasteurized eggs or pasteurize them yourself by immersing the eggs in a 57.2C (135F) water bath for 75 minutes using a sous-vide (which is what we did).\n- Note that the amount of mixture this produces may be too much for your ice cream machine. We use a [Cuisinart ICE-21R](https://www.amazon.com/gp/product/B0041A3KPC/?tag=leaverou-20) and we had to do it in 2 batches. But the mixture lasts well in the fridge, we did the second batch 3 days later and it was fine!",
-			"forked": "[Coffee Grand Marnier Ice Cream](http://www.ronniefein.com/blog/coffee-grand-marnier-ice-cream)",
-			"image": "https://forkgasm.com/images/grand-marnier-ice-cream.jpg"
+			"image": "images/grand-marnier-ice-cream.png"
 		},
 		{
-			"image": "http://forkgasm.com/images/carbonara.jpg",
+			"image": "images/carbonara.png",
 			"name": "Turnip Noodle Carbonara",
 			"id": "turnip-carbonara",
 			"description": "A healthier version of the classic dish that tastes just as good!",
@@ -194,11 +192,10 @@
 					"description": "Top with a little more ground pepper and serve!"
 				}
 			],
-			"notes": "Turnip noodles are far closer to spaghetti than zucchini noodles that lose their shape. You can get them pre-spiralized from Whole Foods, or make them yourself with a spiralizer. Summer squash or butternut squash noodles are other options.\nLardons are matchstick-sized pieces of bacon. ",
-			"forked": "[Zucchini Noodle Carbonara Recipe](https://skinnyms.com/zucchini-noodle-carbonara-recipe/)"
+			"notes": "Turnip noodles are far closer to spaghetti than zucchini noodles that lose their shape. You can get them pre-spiralized from Whole Foods, or make them yourself with a spiralizer. Summer squash or butternut squash noodles are other options.\nLardons are matchstick-sized pieces of bacon. "
 		},
 		{
-			"image": "http://forkgasm.com/images/gambas.png",
+			"image": "images/gambas.png",
 			"name": "Gambas al Ajillo",
 			"id": "gambas-al-ajillo",
 			"description": "Quick and garlicky!",
@@ -261,8 +258,7 @@
 				{
 					"description": "Stir in the parsley, sherry, lemon zest and a generous pinch of salt. Remove from the heat and let stand until the shrimp are cooked through, 3 to 5 minutes. Serve in the skillet, passing crusty bread at the table.  "
 				}
-			],
-			"forked": "[Gambas al Ajillo ](http://www.foodandwine.com/recipes/gambas-al-ajillo),\n[Sizzling Shrimp with Garlic (Gambas al Pil Pil)](https://www.williams-sonoma.com/recipe/sizzling-shrimp-with-garlic-gambas-al-pil-pil.html)"
+			]
 		},
 		{
 			"name": "Shakshuka",
@@ -403,8 +399,7 @@
 				}
 			],
 			"notes": "- The tomato sauce keeps for a couple of days in the fridge. If eating over two days, crack only 4 eggs. Next time, reheat sauce then make 4 more depressions and crack the other 4.\n- We use Sukrin Gold erythritol, which looks and tastes like light brown sugar. If not low-carbing, demarara or other sugar can be substituted.\n- Bell peppers are bad for absorbing pesticides, so we always use organic because the skin is eaten.\n- The type of red wine is not critical, honestly. We use small (187ml) “individual” bottles of fairly cheap red wine.",
-			"forked": "[Israeli Breakfast Of Champions: Shakshuka](http://www.foodrepublic.com/recipes/israeli-breakfast-of-champions-shakshuka/)",
-			"image": "http://forkgasm.com/images/shakshuka.jpg"
+			"image": "images/shakshuka.png"
 		},
 		{
 			"name": "Real Caesar Salad",
@@ -414,7 +409,7 @@
 				"Italian-American",
 				"Salad"
 			],
-			"image": "https://instagram.fbed1-1.fna.fbcdn.net/t51.2885-15/e35/14712020_1147704851979954_5563654975441076224_n.jpg",
+			"image": "images/caesar-salad.png",
 			"ingredients": [
 				{
 					"amount": "0.5",
@@ -491,11 +486,10 @@
 					"description": "If liked, garnish with more whole anchovies and/or Parmesan flakes"
 				}
 			],
-			"forked": "[Classic Caesar Salad](https://www.bonappetit.com/recipe/classic-caesar-salad#recipe-ingredientss)",
 			"notes": "We don't use croutons but if you want them, go ahead!\nSauce keeps well in a fridge for a few days.\n"
 		},
 		{
-			"image": "http://forkgasm.com/images/mushrooms.jpg",
+			"image": "images/mushrooms.png",
 			"name": "Garlic mushrooms a la crème with lardons and green pepper",
 			"id": "garlic-mushrooms-a-la-creme-with-lardons-and-green-pepper",
 			"description": "Not the most photogenic dish, but really easy, quick and delicious!",
@@ -599,7 +593,7 @@
 			"notes": "- If you can find smoked cheddar, use a mixture of 50% smoked cheddar and 50% normal cheddar (it's very strong so not 100%). \n- Don’t allow the cream to overcook or it will separate!\n- You can probably cook the pepper in with the mushrooms and ignore the coconut oil, if desired."
 		},
 		{
-			"image": "http://forkgasm.com/images/chicken-liver-pate.jpg",
+			"image": "images/chicken-liver-pate.png",
 			"name": "Chicken Liver Pâté",
 			"id": "chicken-liver-pate",
 			"description": "Rich and creamy, delicious on bread or even on its own",
@@ -669,11 +663,10 @@
 				{
 					"description": "Put aside in fridge for at least 4 hours and serve, garnishing with the balsamic reduction, parsley and the onion from step 1."
 				}
-			],
-			"forked": "Original recipe by Lea Dam Jensen"
+			]
 		},
 		{
-			"image": "http://forkgasm.com/images/htapodi-krasato.jpg",
+			"image": "images/htapodi-krasato.png",
 			"name": "Octopus in Wine",
 			"id": "octopus-in-wine",
 			"description": "A traditional Greek dish (Htapodi Krasato).",
@@ -736,11 +729,10 @@
 					"description": "Once it's reduced and the octopus and vegetables are tender add 1tbsp olive oil, mix, and serve! Makes about 6 portions."
 				}
 			],
-			"notes": "The original version uses potatoes, but we have used turnips, okra and other vegetables with good success. Turnips also make the dish low carb. The one in the photo uses okra.\nΧταπόδι κρασάτο is the Greek name.",
-			"forked": "[Χταπόδι κρασάτο: ξεχωριστός μεζές με τρία μόνο υλικά!](https://www.cretangastronomy.gr/2013/04/%CF%87%CF%84%CE%B1%CF%80%CF%8C%CE%B4%CE%B9-%CE%BA%CF%81%CE%B1%CF%83%CE%AC%CF%84%CE%BF-%CE%BE%CE%B5%CF%87%CF%89%CF%81%CE%B9%CF%83%CF%84%CF%8C%CF%82-%CE%BC%CE%B5%CE%B6%CE%AD%CF%82-%CE%BC%CE%B5-%CF%84-2/)",
+			"notes": "The original version uses potatoes, but we have used turnips, okra and other vegetables with good success. Turnips also make the dish low carb. The one in the photo uses okra.\nΧταπόδι κρασάτο is the Greek name."
 		},
 		{
-			"image": "http://forkgasm.com/images/salmon-sous-vide.jpg",
+			"image": "images/salmon-sous-vide.png",
 			"name": "Sous Vide Salmon Teriyaki",
 			"id": "salmon-teriyaki",
 			"description": "Tender, refreshing and very easy to make",
@@ -815,11 +807,10 @@
 					"description": "Garnish with the sliced spring onion and serve!"
 				}
 			],
-			"notes": "Not low carbing? You can use brown sugar in place of erythritol.",
-			"forked": "[Sous Vide Salmon Teriyaki](https://www.williams-sonoma.com/recipe/sous-vide-salmon-teriyaki.html)"
+			"notes": "Not low carbing? You can use brown sugar in place of erythritol."
 		},
 		{
-			"image": "http://forkgasm.com/images/sfouggato.png",
+			"image": "images/sfouggato.png",
 			"name": "Sfouggato",
 			"description": "A Lesbian delicacy that is super easy to make and can be eaten hot or cold.",
 			"tagArr": [
@@ -904,8 +895,7 @@
 					"description": "Spread on a deep, oiled baking tray and bake at 180-200C (350-390F) for about 40 minutes or until golden."
 				}
 			],
-			"notes": "- Graviera is a Greek hard light yellow cheese. Can’t find graviera? Use any yellow cheese that melts. The sfouggato in this photo was actually made with cheddar!\n- Don’t have all the ingredientss? Worry not! This is a dish with many variations. Most of the ingredientss are optional. What is absolutely mandatory is the eggs, zucchinis, some herbs (parsley, dill, and/or mint), some kind of cheese, and some kind of onion (only red onion or only spring onion is ok).",
-			"forked": "[Σφουγγάτο το Μυτιληνιό](https://akispetretzikis.com/el/categories/almyres-pites-tartes/sfoyggato-to-mytilhnio), [Σφουγγάτο Μυτιλήνης με κολοκυθάκια](https://www.madameginger.com/syntages/syntages-mageirikis/ayga/sfouggato-mutilinis/)"
+			"notes": "- Graviera is a Greek hard light yellow cheese. Can’t find graviera? Use any yellow cheese that melts. The sfouggato in this photo was actually made with cheddar!\n- Don’t have all the ingredientss? Worry not! This is a dish with many variations. Most of the ingredientss are optional. What is absolutely mandatory is the eggs, zucchinis, some herbs (parsley, dill, and/or mint), some kind of cheese, and some kind of onion (only red onion or only spring onion is ok)."
 		},
 		{
 			"name": "Khoresht Karafs",
@@ -1001,7 +991,6 @@
 				"Persian",
 				"Beef"
 			],
-			"forked": "Elika’s family recipe",
 			"id": "khoresht-karafs"
 		}
 	]

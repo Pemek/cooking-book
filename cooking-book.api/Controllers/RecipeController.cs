@@ -25,25 +25,27 @@ namespace cooking_book.api.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Recipe>>> GetAllRecipes() 
         {
+            string baseUrl = $"{Request.Scheme}://{Request.Host.ToUriComponent()}";
             var recipes = await _context.Recipes
                 .Include(r => r.Ingredients)
                 .Include(r => r.Steps)
                 .ToListAsync();
                 
-            List<RecipeDTO> recipesDTO = recipes.Select(r => new RecipeDTO(r)).ToList();
+            List<RecipeDTO> recipesDTO = recipes.Select(r => new RecipeDTO(r, baseUrl)).ToList();
             return Ok(recipesDTO);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Recipe>> GetRecipe(string Id)
         {
+            string baseUrl = $"{Request.Scheme}://{Request.Host.ToUriComponent()}";
             var recipe = await _context.Recipes
                 .Include(r => r.Ingredients)
                 .Include(r => r.Steps)
                 .FirstOrDefaultAsync(x => x.Id == Id);
             if (recipe == null)
                 return NotFound();
-            var recipeDTO = new RecipeDetailsDTO(recipe);
+            var recipeDTO = new RecipeDetailsDTO(recipe, baseUrl);
             return Ok(recipeDTO);
         }
     }
