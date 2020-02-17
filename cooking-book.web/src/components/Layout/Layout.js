@@ -2,10 +2,6 @@ import React from 'react'
 import logo from '../../logo.svg';
 
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
-import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import RecipeFilter from '../../containers/RecipeFilter/RecipeFilter';
 

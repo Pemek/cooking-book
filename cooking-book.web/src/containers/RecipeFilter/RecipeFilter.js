@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react'
-import { FormControl, Button, Form } from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '../../store/actions/recipes';
 
@@ -15,12 +15,12 @@ const RecipeFilter = (props) => {
             setSearch(localKeyword);
             if(localKeyword.length < 3 && localKeyword.length > 0)
                 return;
-            clearTimeout(timmer);
-            timmer = setTimeout(() => {
+            clearTimeout(timmer.current);
+            timmer.current = setTimeout(() => {
                 dispatch(actions.recipesFilterChanged(localKeyword));
             }, 1000);        
         },
-        []
+        [dispatch]
     );
 
     return (

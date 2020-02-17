@@ -6,19 +6,19 @@ import * as actions from '../../store/actions/recipes';
 import RecipeThumb from '../../components/RecipeThumb/RecipeThumb';
 import Spinner from '../../components/UI/Spinner/Spinner';
 
-const RecipeList = (props) => {
+const RecipeList = () => {
     const dispatch = useDispatch();
     const recipes = useSelector(state => state.recipesReducer.recipes);
     const keyword = useSelector(state => state.recipesReducer.keyword);
     const rLoading = useSelector(state => state.recipesReducer.loading);
     useEffect(() => {
         dispatch(actions.fetchRecipes(keyword));
-    }, [keyword]);
+    }, [keyword, dispatch]);
 
     let recipeList = (
         <Spinner />
     );
-    if(rLoading == false)
+    if(rLoading === false)
         recipeList = (
             <Container fluid style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                 {recipes.map(r => 

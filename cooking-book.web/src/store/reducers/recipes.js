@@ -35,8 +35,9 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 keyword: action.keyword
             }
+        default:
+            return state;
     }
-    return state;
 }
 
 export default reducer;
