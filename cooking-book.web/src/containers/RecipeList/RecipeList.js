@@ -8,10 +8,10 @@ import RecipeThumb from '../../components/RecipeThumb/RecipeThumb';
 const RecipeList = (props) => {
     const dispatch = useDispatch();
     const recipes = useSelector(state => state.recipesReducer.recipes);
-
+    const keyword = useSelector(state => state.recipesReducer.keyword);
     useEffect(() => {
-        dispatch(actions.fetchRecipes());
-    }, []);
+        dispatch(actions.fetchRecipes(keyword));
+    }, [keyword]);
 
     return (
         <div>

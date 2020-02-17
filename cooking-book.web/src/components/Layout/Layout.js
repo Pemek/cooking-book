@@ -7,6 +7,7 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import RecipeFilter from '../../containers/RecipeFilter/RecipeFilter';
 
 const Layout = (props) => {
     return (
@@ -26,10 +27,7 @@ const Layout = (props) => {
                             Cooking Book
                         </Navbar.Brand>
                     </Link>
-                    <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-success">Search</Button>
-                    </Form>
+                    <RecipeFilter />
                 </Navbar>
             </header>
             <main>

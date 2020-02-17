@@ -20,10 +20,12 @@ export const fetchRecipesStart = () => {
     };
 };
 
-export const fetchRecipes = () => {
+export const fetchRecipes = (keyword) => {
     return async dispatch => {
         dispatch(fetchRecipesStart());
-        const url = "https://localhost:5001/recipe";
+        let url = `https://localhost:5001/recipe`;
+        if(keyword && keyword.length > 0)
+            url = `${url}/?keyword=${keyword}`;
         const response = await fetch(url, {
             method: 'GET'
         });
@@ -31,3 +33,10 @@ export const fetchRecipes = () => {
         dispatch(fetchRecipesSuccess(responseJson));
     };
 };
+
+export const recipesFilterChanged = (keyword) => {
+    return {
+        type: actionTypes.RECIPES_FILTER_CHANGED,
+        keyword: keyword
+    };
+}

@@ -3,7 +3,8 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState = {
     recipes: [],
     loading: false,
-    error: ""
+    error: "",
+    keyword: ""
 };
 
 const reducer = (state = initialState, action) => {
@@ -28,6 +29,11 @@ const reducer = (state = initialState, action) => {
                 recipes: action.recipes,
                 loading: false,
                 error: ""
+            };
+        case actionTypes.RECIPES_FILTER_CHANGED:
+            return {
+                ...state,
+                keyword: action.keyword
             }
     }
     return state;
