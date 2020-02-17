@@ -8,13 +8,14 @@ const RecipeFilter = (props) => {
     const keyword = useSelector(state => state.recipesReducer.keyword);
     const [search, setSearch] = useState(keyword);
 
-    const handleSearchClick = () => {
-        dispatch(actions.recipesFilterChanged(search));
-    };
-    const handleSearchKeyPress = event => {
-        if (event.key == 'Enter') {
-            handleSearchClick();
-        }
+    let timmer;
+    const handleSearchChange = event => {
+        let localKeyword = event.target.value;
+        setSearch(localKeyword);
+        clearTimeout(timmer);
+        timmer = setTimeout(() => {
+            dispatch(actions.recipesFilterChanged(localKeyword));
+        }, 1000);
     };
 
     return (
@@ -24,11 +25,7 @@ const RecipeFilter = (props) => {
                 placeholder="Search" 
                 className="mr-sm-2" 
                 value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                onKeyPress={handleSearchKeyPress} />
-            <Button 
-                variant="outline-success" 
-                onClick={handleSearchClick}>Search</Button>
+                onChange={handleSearchChange} />
         </div>
     );
 };
