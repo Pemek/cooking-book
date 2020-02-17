@@ -23,10 +23,14 @@ namespace cooking_book.api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Recipe>>> GetAllRecipes() 
+        public async Task<ActionResult<List<Recipe>>> GetAllRecipes([FromQuery]string keyword = "") 
         {
             string baseUrl = $"{Request.Scheme}://{Request.Host.ToUriComponent()}";
-            var recipes = await _context.Recipes
+            var recQuery = string.IsNullOrWhiteSpace(keyword) || keyword.Length < 3 
+                ? _context.Recipes
+                : _context.Recipes.Where(x => x.Name.Contains(keyword, StringComparison.OrdinalIgnoreCase));
+
+            var recipes = await recQuery
                 .Include(r => r.Ingredients)
                 .Include(r => r.Steps)
                 .ToListAsync();
@@ -36,7 +40,7 @@ namespace cooking_book.api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Recipe>> GetRecipe(string Id)
+        public async Task<ActionResult<Recipe>> GetRecipe([FromRoute]string Id)
         {
             string baseUrl = $"{Request.Scheme}://{Request.Host.ToUriComponent()}";
             var recipe = await _context.Recipes
