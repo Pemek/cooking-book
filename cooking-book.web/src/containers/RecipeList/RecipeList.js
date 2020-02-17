@@ -1,20 +1,25 @@
 import React, { useEffect } from 'react'
-import Container from 'react-bootstrap/Container'
 import { useSelector, useDispatch } from 'react-redux'
+import Container from 'react-bootstrap/Container'
 
 import * as actions from '../../store/actions/recipes';
 import RecipeThumb from '../../components/RecipeThumb/RecipeThumb';
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 const RecipeList = (props) => {
     const dispatch = useDispatch();
     const recipes = useSelector(state => state.recipesReducer.recipes);
     const keyword = useSelector(state => state.recipesReducer.keyword);
+    const rLoading = useSelector(state => state.recipesReducer.loading);
     useEffect(() => {
         dispatch(actions.fetchRecipes(keyword));
     }, [keyword]);
 
-    return (
-        <div>
+    let recipeList = (
+        <Spinner />
+    );
+    if(rLoading == false)
+        recipeList = (
             <Container fluid style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                 {recipes.map(r => 
                     <RecipeThumb
@@ -25,6 +30,11 @@ const RecipeList = (props) => {
                     description={r.description} />
                 )}
             </Container>
+        );
+
+    return (
+        <div>
+            {recipeList}
         </div>
     );
 };

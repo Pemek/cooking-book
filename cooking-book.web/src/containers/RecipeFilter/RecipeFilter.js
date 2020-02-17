@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback, useRef } from 'react'
 import { FormControl, Button, Form } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '../../store/actions/recipes';
@@ -8,15 +8,20 @@ const RecipeFilter = (props) => {
     const keyword = useSelector(state => state.recipesReducer.keyword);
     const [search, setSearch] = useState(keyword);
 
-    let timmer;
-    const handleSearchChange = event => {
-        let localKeyword = event.target.value;
-        setSearch(localKeyword);
-        clearTimeout(timmer);
-        timmer = setTimeout(() => {
-            dispatch(actions.recipesFilterChanged(localKeyword));
-        }, 1000);
-    };
+    let timmer = useRef();
+    const handleSearchChange = useCallback(
+        (event) => {
+            let localKeyword = event.target.value;
+            setSearch(localKeyword);
+            if(localKeyword.length < 3 && localKeyword.length > 0)
+                return;
+            clearTimeout(timmer);
+            timmer = setTimeout(() => {
+                dispatch(actions.recipesFilterChanged(localKeyword));
+            }, 1000);        
+        },
+        []
+    );
 
     return (
         <div className="form-inline">

@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Badge from 'react-bootstrap/Badge'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 import RecipeHeaderImage from '../../components/RecipeDetails/RecipeHeaderImage/RecipeHeaderImage';
 import Ingredients from '../../components/RecipeDetails/Ingredients/Ingredients';
 import Steps from '../../components/RecipeDetails/Steps/Steps';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Spinner from '../../components/UI/Spinner/Spinner';
+
 
 const RecipeDetails = () => {
     const { id } = useParams();
@@ -24,14 +26,20 @@ const RecipeDetails = () => {
         fetchRecipe();
     }, [])
 
-    recipeDetails = (<div>Loading..</div>);
+    recipeDetails = (<Spinner />);
     if (recipeJson !== null)
         recipeDetails = (
             <div>
                 <RecipeHeaderImage image={recipeJson.image} />
                 <div style={{textAlign: 'center'}}>
                     <h1>{recipeJson.name}</h1>
-                    <h5>{recipeJson.tag.map(t => <Badge style={{margin: '5px'}} variant="info">{t}</Badge>)}</h5>
+                    <h5>{recipeJson.tag.map(t => 
+                            <Badge 
+                                key={t}
+                                style={{margin: '5px'}} 
+                                variant="info">{t}</Badge>
+                        )}
+                    </h5>
                 </div>
                 <Container>
                     <Row>
